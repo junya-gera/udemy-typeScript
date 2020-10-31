@@ -28,3 +28,8 @@ const animal: {
 const fruits: string[] = ['Apple', 'Banana', 'Orange'];
 // ユニオン型。 string と number 両方入れられる
 const animals = ['dog', 2]
+
+// tuple型 決まった内容の配列を作る方法
+// 型推論ではなく、配列で型注釈をする。この配列は[string, number,boolean]の順しか入れられない
+// 4つめの要素は入れられないが、 push などでは入ってしまうので注意
+const book: [string, number, boolean] = ['business', 1500, false];
