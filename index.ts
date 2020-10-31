@@ -58,5 +58,9 @@ unionType.toUpperCase();
 // literal 型。 特定の値のみが入れられる。 この apple には 'apple' しか入らない
 // const で宣言した変数は literal 型になる
 const apple = 'apple';
+
+// type エイリアス。変数宣言のように型に名前をつけることができる
+type ClothSize = 'small' | 'medium' | 'large';
+
 // literal と union のミックス。 clothSize は この 3つのどれかしか取れない
-let clothSize: 'small' | 'medium' | 'large' = 'large';
+let clothSize: ClothSize = 'large';
