@@ -47,3 +47,9 @@ const coffee = {
     hot: true,
     size: CoffeeSize.SHORT,
 }
+
+let unionType: number | string = 10;
+
+unionType.toUpperCase();
+unionType = 'hello';
+unionType.toUpperCase();
