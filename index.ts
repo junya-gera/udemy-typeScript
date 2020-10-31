@@ -33,3 +33,17 @@ const animals = ['dog', 2]
 // 型推論ではなく、配列で型注釈をする。この配列は[string, number,boolean]の順しか入れられない
 // 4つめの要素は入れられないが、 push などでは入ってしまうので注意
 const book: [string, number, boolean] = ['business', 1500, false];
+
+// enum型は基本的にパスカルケース、要素は全て大文字
+enum CoffeeSize {
+    SHORT = 'SHORT',
+    TALL = 'TALL',
+    GRANDE = 'GRANDE',
+    VENTI = 'VENTI',
+}
+
+// ここの size は CoffeeSize という enum 型の要素しか持てないようになる
+const coffee = {
+    hot: true,
+    size: CoffeeSize.SHORT,
+}
