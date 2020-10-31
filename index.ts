@@ -23,3 +23,8 @@ const animal: {
     name: 'okoge',
     age: 3, 
 }
+
+// この配列には string しか入れられなくなる
+const fruits: string[] = ['Apple', 'Banana', 'Orange'];
+// ユニオン型。 string と number 両方入れられる
+const animals = ['dog', 2]
