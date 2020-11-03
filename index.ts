@@ -64,3 +64,12 @@ type ClothSize = 'small' | 'medium' | 'large';
 
 // literal と union のミックス。 clothSize は この 3つのどれかしか取れない
 let clothSize: ClothSize = 'large';
+
+
+// 関数に型をつける。() の後ろは戻り値の型
+// 戻り値は最悪型推論でもいいが、引数は型が書いてなければ any になってしまうので必ず書く
+function add(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+add(1, 2);
