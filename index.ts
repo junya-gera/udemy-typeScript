@@ -73,3 +73,10 @@ function add(num1: number, num2: number): number {
 }
 
 add(1, 2);
+
+// void 型は何も返さない = undefined を返す型
+function sayHello(): void {
+    console.log('Hello!');
+}
+
+console.log(sayHello()); // undefined
