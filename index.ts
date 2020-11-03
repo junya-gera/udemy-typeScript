@@ -107,3 +107,9 @@ unknownInput = true;
 if (typeof unknownInput === 'string') {
     text = unknownInput;
 }
+
+// never 型について。決して何も返さない
+// この関数では何も返さずエラーになるが、 never 型ならエラーにならずに済む
+function error(message: string): never {
+    throw new Error(message);
+}
