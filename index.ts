@@ -71,12 +71,17 @@ let clothSize: ClothSize = 'large';
 function add(num1: number, num2: number): number {
     return num1 + num2;
 }
-
 add(1, 2);
 
 // void 型は何も返さない = undefined を返す型
 function sayHello(): void {
     console.log('Hello!');
 }
-
 console.log(sayHello()); // undefined
+
+// 関数が入った変数に型をつける。普通のアロー関数はこれ↓
+//const number = () => { };
+// 型をつけるのは左辺でも右辺でもいい。これは左辺。左辺の場合は戻り値の型の前は => になる
+const doubleNumber: (num: number) => number = num => num * 2;
+// これは右辺
+const tripleNumber = (num: number): number => num * 3;
