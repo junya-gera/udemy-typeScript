@@ -85,3 +85,13 @@ console.log(sayHello()); // undefined
 const doubleNumber: (num: number) => number = num => num * 2;
 // これは右辺
 const tripleNumber = (num: number): number => num * 3;
+
+// コールバック関数に型をつける。num, cb という引数を取るとする。cb は number の引数と戻り値を取る関数
+function doubleAndHandle(num: number, cb: (num:number) => number) {
+    const doubleNum = cb(num * 2);
+    console.log(doubleNum);
+}
+// 引数は 2つ取るので、21, doubleNum という関数を入れる。 doubleNum は cb を行う。
+doubleAndHandle(21, doubleNum => {
+    return doubleNum;
+});
