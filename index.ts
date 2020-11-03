@@ -95,3 +95,15 @@ function doubleAndHandle(num: number, cb: (num:number) => number) {
 doubleAndHandle(21, doubleNum => {
     return doubleNum;
 });
+
+// unknown 型について
+let unknownInput: unknown;
+let text: string;
+// なんでも入れられる
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+// 使うときは typeof で調べてからでないと使えない。 any より厳しい
+if (typeof unknownInput === 'string') {
+    text = unknownInput;
+}
