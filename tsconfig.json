@@ -65,5 +65,18 @@
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  // ↓↓↓ コンパイルするファイルを選ぶ。下に行くほど強い
+  // "include": [             --- ここに書かれたファイルのみコンパイルする
+  //   "index.ts"
+  // ]
+  // "exclude": [             --- ここに書かれたファイルはコンパイルから省かれる
+  //   "compiler/compiler.ts" --- root ディレクトリが基準になっている
+  //   "**/compiler.ts"       --- 全ての階層の compiler.ts を省く
+  //   "*.spec.ts"            --- spec ファイルは全て省く（ワイルドカード）
+  //   "node_modules"         --- いつも省くやつ
+  // ]
+  // "files": [               --- ワイルドカードが使えず、絶対パスか相対パスを書く
+  //   "compiler/compiler.ts"
+  // ]
 }
