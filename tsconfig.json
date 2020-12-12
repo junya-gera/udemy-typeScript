@@ -12,9 +12,19 @@
     // ↓ lib: どの lib ファイル（型の定義書）を使用するか指定する
     //   指定しなければ target に指定した値によって勝手に決まる
     // "lib": [],                             /* Specify library files to be included in the compilation. */
+    
+    // ↓ allowJs: true なら JS ファイルもコンパイルの対象にする
     // "allowJs": true,                       /* Allow javascript files to be compiled. */
+    
+    // ↓ checkJs: true なら JS ファイルもエラーをチェックする（型推論など）
+    //   allowJs が true でないと使えない
     // "checkJs": true,                       /* Report errors in .js files. */
+    
+    // ↓ jsx: React を使うときに使う
     // "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    
+    // ↓ declaration: true にしておくとそのライブラリ全部の型の情報が載っている '.d.ts' ができる
+    //   他者に渡すときにドキュメントの役割になる
     // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
