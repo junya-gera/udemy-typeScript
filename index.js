@@ -92,3 +92,4 @@ if (typeof unknownInput === 'string') {
 function error(message) {
     throw new Error(message);
 }
+//# sourceMappingURL=index.js.map

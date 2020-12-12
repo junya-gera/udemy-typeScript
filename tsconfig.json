@@ -27,7 +27,10 @@
     //   他者に渡すときにドキュメントの役割になる
     // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
-    // "sourceMap": true,                     /* Generates corresponding '.map' file. */
+    
+    // ↓ sourceMap: コンパイル時に js.map が作られ、ブラウザが TS を理解できるようになる
+    //   Web 上でデベロッパーツールを開くと TS も見ることができ、ブレークポイントをつけてデバッグが行えるようになる
+    "sourceMap": true,                     /* Generates corresponding '.map' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
     // "outDir": "./",                        /* Redirect output structure to the directory. */
     // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
