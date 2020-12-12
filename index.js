@@ -1,3 +1,4 @@
+"use strict";
 // 型の付け方
 var hasValue = true;
 // JS,TS は number は 浮動小数点数
@@ -15,7 +16,7 @@ var person = {
 // オブジェクトの型注釈
 var animal = {
     name: 'okoge',
-    age: 3
+    age: 3,
 };
 // この配列には string しか入れられなくなる
 var fruits = ['Apple', 'Banana', 'Orange'];
@@ -36,7 +37,7 @@ var CoffeeSize;
 // ここの size は CoffeeSize という enum 型の要素しか持てないようになる
 var coffee = {
     hot: true,
-    size: CoffeeSize.SHORT
+    size: CoffeeSize.SHORT,
 };
 var unionType = 10;
 // unionType は number か string を取りえるが、今は 10 なので toUpperCase() は使えない
@@ -85,4 +86,9 @@ unknownInput = true;
 // 使うときは typeof で調べてからでないと使えない。 any より厳しい
 if (typeof unknownInput === 'string') {
     text = unknownInput;
+}
+// never 型について。決して何も返さない
+// この関数では何も返さずエラーになるが、 never 型ならエラーにならずに済む
+function error(message) {
+    throw new Error(message);
 }
